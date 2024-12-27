@@ -40,10 +40,10 @@ function renderHomePage() {
 
 function renderPostList() {
   const postListElement = document.getElementById('postList');
-  // Clear the current list
+
   postListElement.innerHTML = '';
 
-  // Loop through the posts array and create li elements
+
   posts.forEach((post) => {
     const postItem = document.createElement('li');
     postItem.textContent = post;
@@ -58,8 +58,8 @@ function handleSignUp() {
   const passwordInput = document.getElementById('password').value.trim();
 
   if (nameInput && emailInput && passwordInput) {
-    userName = nameInput; // Store user name for personalized greeting
-    renderHomePage();     // Proceed to the home page
+    userName = nameInput; 
+    renderHomePage();    
   } else {
     alert('Please fill out all fields');
   }
@@ -70,9 +70,9 @@ function handleCreatePost() {
   const postContent = document.getElementById('postContent').value.trim();
   if (postContent) {
     posts.push(postContent);
-    // Clear the text area
+  
     document.getElementById('postContent').value = '';
-    // Re-render the posts list
+  
     renderPostList();
   } else {
     alert('Post content cannot be empty');
